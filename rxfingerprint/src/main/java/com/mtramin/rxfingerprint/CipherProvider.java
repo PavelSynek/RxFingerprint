@@ -70,7 +70,7 @@ abstract class CipherProvider {
 		KeyGenParameterSpec.Builder builder = new KeyGenParameterSpec.Builder(keyName,
 				KeyProperties.PURPOSE_ENCRYPT | KeyProperties.PURPOSE_DECRYPT)
 				.setBlockModes(blockModes)
-				.setUserAuthenticationRequired(true)
+				.setUserAuthenticationRequired(false)
 				.setEncryptionPaddings(encryptionPaddings);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 			builder.setInvalidatedByBiometricEnrollment(invalidatedByBiometricEnrollment);
